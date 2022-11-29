@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>S&A RC CARS</title>
+</head>
+
+<body>
+
+</body>
+</html>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>S&A RC CARS</h1>
+        <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="street.html">STREET</a></li>
+            <li><a href="off-road.html">OFF ROAD</a></li>
+            <li><a href="#" id="active">BUY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    
+    <!-- Buy information -->
+    <div class="outer-section">
+
+        <!-- Left side -->
+<div class="buy-lt">
+    <img id="rc-car" src="images/classic.png" alt="classic">
+    <form class="ship-info">
+        <input class="ct-input" type="text" id="name"><br>
+        <label class="contact-label" for="name">Name</label><br>
+
+        <input class="ct-input" type="text" id="address"><br>
+        <label class="contact-label" for="address">Adress</label><br>
+
+        <input class="ct-input" type="text" id="city"><br>
+        <label class="contact-label" for="city">City</label><br>
+
+        <div class="ship">
+            <div class="ship-lt">
+                <input class="ct-input" type="text" id="state"><br>
+                <label class="contact-label" for="state">State</label>
+            </div>
+            <div class="ship-rt">
+                <input class="ct-input" type="text" id="zip"><br>
+                <label class="contact-label" for="zip">Zipcode</label>
+
+            </div>
+        </div>
+
+                <input class="ct-input" type="text" id="phone"><br>
+                <label class="contact-label" for="phone">Phone</label><br>
+
+
+    </form>
+</div>
+
+        <!-- Right side -->
+        <div class="buy-rt">
+            <form class="order-shell">
+                <!-- Choose RC Car -->
+                <section class="rc-car-choice">
+                    <select name="rc-car" id="rc-car-style" onchange="changeImage()">
+                        <option disabled selected value>-- Select Your RC-CAR Style --</option>
+                        <option value="sport">SPORT</option>
+                        <option value="suv">SUV</option>
+                        <option value="classic">CLASSIC</option>
+                        <option value="atv">ATV</option>
+                        <option value="dune buggy">DUNE BUGGY</option>
+                        <option value="crawlers">CRAWLERS</option>
+                    </select> <br>
+                    <label class="order-label" for="rc-car-style">RC-CAR Style</label>
+
+                </section>
+                
+                <!-- Choose RC Car Color -->
+                <section class="rc-car-color" id="rc-car-section">
+                    <select name="rc-car-color" id="rc-car-color-style" onchange="updateOrder()"> 
+                        <option disabled selected value>-- Select your RC-CAR Color--</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Red">Red</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Black">Black</option>
+                    </select> <br>
+                    <label class="order-label" for="rc-car-color-style">RC-CAR Color</label>
+                </section>
+
+                <!-- Custom Options-->
+
+                <p class="custom-label" id="custom-label">We offer the following custom Options. Check all that apply</p>
+                <div class="custom-options" id="custom-options">
+                    <section class="co-items">
+                        <input type="checkbox" id="wt-tires" value="White Tires" onchange="customTires()">
+                        <label for="wt-tires" class="order-label">TIRES</label><br>
+
+                        <input type="checkbox" id="wt-shell" value="shell" onchange="customShell()">
+                        <label for="wt-shell" class="order-label">SHELL</label><br>
+
+
+                        <input type="checkbox" id="wt-wheels" value="wheels" onchange="customWheels()">
+                        <label for="wt-wheels" class="order-label">WHEELS</label>
+                    </section>
+                </div>
+            </form>
+
+            <button id="btn-purchase" onclick="reserveOrder()">Purchase</button>
+            <div class="order-show" id="order-show">
+                <div class="receipt-lt">
+                    <p class="rec-lt" id="rec-rc-car"></p>
+                    <p class="rec-lt" id="rec-color"></p>
+                    <p class="rec-lt" id="rec-serial"></p>
+                    <p class="rec-lt" id="shell"></p>
+                    <p class="rec-lt" id="wheels"></p>
+                    <p class="rec-lt" id="rec-tires"></p>
+                    <p class="rec-rt">Sub Total</p>
+                    <p class="rec-rt">Tax</p>
+                    <p class="rec-rt">Total</p>
+            </div>
+            <div class="receipt-rt">
+                <p class="amount" id="rec-rc-car-price"></p>
+                <p class="amount" id="rec-color-price"></p>
+                <p class="amount">Included</p>
+                <p class="amount" id="rec-shell-price"></p>
+                <p class="amount" id="rec-wheels-price"></p>
+                <p class="amount" id="rec-tires-price"></p>
+                <p class="amount" id="rec-subtotal"></p>
+                <p class="amount" id="rec-tax"></p>
+                <p class="amount" id="rec-total"></p>
+
+            </div>
+        </div>
+
+
+        
+
+    </div>
+
+</div>
+
+    <!-- Footer Info -->
+<div class="flex-footer">
+    <p class="footer-address">S&A RC CARS. 2022 Speedway Lane. Highway City, CA 56789</p>
+    <div class="footer-center">
+        <ul class="nav-footer">
+
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="off-road.html">OFF ROAD</a></li>
+            <li><a href="street.html">STREET</a></li>
+            <li><a href="#">BUY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="social-box">
+        <a href="https://unsplash.com/explore" target="_blank">Images by Unsplashed</a>
+        <ul class="nav-social">
+            <li><a href="#"><img class="social-icon" src="images/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img class="social-icon" src="images/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img class="social-icon" src="images/instagram.png" alt="instagram"></a></li>
+            <li><a href="#"><img class="social-icon" src="images/linkedin.png" alt="linkedin"></a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="scripts/buy.js"></script>
+                
+
+
+
+</body>
+
+</html>
